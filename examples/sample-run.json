@@ -1,0 +1,35 @@
+{
+  "mode": "synthetic fixtures; local simulation",
+  "input_rows": 6,
+  "drafts": 2,
+  "new_simulated_uploads": 1,
+  "emails_sent": 0,
+  "trace": [
+    {
+      "id": "alpha",
+      "status": "pending-review",
+      "campaign": "operations"
+    },
+    {
+      "id": "bravo",
+      "status": "pending-review",
+      "campaign": "hiring"
+    },
+    {
+      "id": "charlie",
+      "status": "needs-detail"
+    },
+    {
+      "id": "delta",
+      "status": "suppressed"
+    },
+    {
+      "id": "echo",
+      "status": "suppressed"
+    },
+    {
+      "id": "alpha-copy",
+      "status": "duplicate"
+    }
+  ]
+}

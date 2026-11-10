@@ -1,0 +1,82 @@
+{
+  "notice": "Every contact, fact, model recommendation and verification result is invented for this offline demo.",
+  "leads": [
+    {
+      "id": "alpha",
+      "name": "Alex Example",
+      "company": "Alpha Demo",
+      "email": "alex@alpha.example",
+      "verification_status": "deliverable"
+    },
+    {
+      "id": "bravo",
+      "name": "Blair Example",
+      "company": "Bravo Demo",
+      "email": "blair@bravo.example",
+      "verification_status": "deliverable"
+    },
+    {
+      "id": "charlie",
+      "name": "Casey Example",
+      "company": "Charlie Demo",
+      "email": "casey@charlie.example",
+      "verification_status": "deliverable"
+    },
+    {
+      "id": "delta",
+      "name": "Devon Example",
+      "company": "Delta Demo",
+      "email": "devon@delta.example",
+      "do_not_contact": true,
+      "verification_status": "deliverable"
+    },
+    {
+      "id": "echo",
+      "name": "Emery Example",
+      "company": "Echo Demo",
+      "email": "emery@echo.example",
+      "replied": true,
+      "verification_status": "deliverable"
+    },
+    {
+      "id": "alpha-copy",
+      "name": "Alex Example",
+      "company": "Alpha Demo",
+      "email": "ALEX@ALPHA.EXAMPLE",
+      "verification_status": "deliverable"
+    }
+  ],
+  "research": {
+    "alpha": {
+      "context": "The demo team tracks stock requests in a shared spreadsheet.",
+      "detail": "Your team tracks stock requests in a shared spreadsheet.",
+      "hiring_signal": false,
+      "roles_hiring": []
+    },
+    "bravo": {
+      "context": "The demo company is hiring a coordinator to manage intake.",
+      "detail": "You are hiring a coordinator to manage intake.",
+      "hiring_signal": true,
+      "roles_hiring": [
+        "coordinator"
+      ]
+    },
+    "charlie": {
+      "context": "The demo company lists an intake form.",
+      "detail": "You are hiring an analyst for intake.",
+      "hiring_signal": false,
+      "roles_hiring": []
+    }
+  },
+  "recommendations": {
+    "alpha": {
+      "campaign": "hiring"
+    },
+    "bravo": {
+      "campaign": "hiring"
+    },
+    "charlie": {
+      "campaign": "operations"
+    }
+  }
+}
