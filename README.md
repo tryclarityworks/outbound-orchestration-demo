@@ -1,5 +1,9 @@
 # Outbound orchestration demo
 
+[![Offline checks](https://github.com/tryclarityworks/outbound-orchestration-demo/actions/workflows/check.yml/badge.svg)](https://github.com/tryclarityworks/outbound-orchestration-demo/actions/workflows/check.yml)
+
+![Actual synthetic example output](examples/preview.png)
+
 A local Python showcase of evidence-based routing, templated personalization, review, suppression checks, and idempotent upload simulation. Adapted from Clarity Works tooling by Vatsal Jain with AI-assisted development.
 
 This demo uses invented contacts on reserved example domains. Research, model recommendations, verification results and review decisions are explicit fixtures. It has no network transport, sending credentials or live campaign integration. The upload stage writes a local JSON ledger; emails sent stays at zero.
@@ -51,3 +55,7 @@ Model recommendations can invent a plausible campaign or hiring rationale. The r
 Tests exercise those boundaries, changed content after approval, missing reviewer/verification, repeated runs, and reply sync. They do not measure production throughput or conversion rates.
 
 The broader project is explained in the [outbound engine case study](https://www.vatsaljain.com/work/outbound-engine/). See [PROVENANCE.md](PROVENANCE.md) for extracted code and new adaptations. No open-source license has been assigned to this showcase.
+
+## Example output
+
+The [rendered report](examples/report.html) summarizes the actual fixture run: six input rows, two drafts, one new simulated staging and zero emails sent. The trace shows initial routing/review states; the ledger subsequently applies the explicit review fixture and reply suppression. A second run stages zero additional uploads. The report/preview were added November 17, 2026; they are showcase presentation, not a new operating result.

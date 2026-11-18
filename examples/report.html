@@ -1,0 +1,24 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Outbound orchestration | Synthetic demo</title><style>body{margin:0;background:#f4f3f5;color:#37323e;font:18px/1.6 system-ui,sans-serif}header{background:#37323e;color:#f4f3f5;padding:36px 48px}h1{font-size:52px;line-height:1.1;letter-spacing:-.03em;margin:16px 0}main{padding:32px 48px;max-width:1280px;margin:auto}h2{font-size:30px}.notice{background:#deb841;color:#37323e;padding:12px 16px;font-weight:650}.facts{display:flex;gap:36px;padding:24px;background:#e9e8eb}.facts strong{font-size:34px;display:block}table{width:100%;border-collapse:collapse}th,td{text-align:left;padding:14px 20px}th{background:#37323e;color:#f4f3f5}tbody tr:nth-child(odd){background:#e9e8eb}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:white;padding:24px;font-size:16px}section{margin-top:40px}p{max-width:80ch}</style><header><p class="notice">SYNTHETIC DEMO — fictional contacts. Local simulation; no email sent.</p><h1>Outbound, with review.</h1><p>Actual output from the credential-free public orchestration demo.</p></header><main><div class="facts"><span><strong>6</strong>fixture rows</span><span><strong>2</strong>rendered drafts</span><span><strong>1</strong>new local staging</span><span><strong>0</strong>emails sent</span></div><h2>Initial routing and review</h2><table><thead><tr><th>Fixture</th><th>Initial status</th><th>Selected campaign</th></tr></thead><tbody><tr><td>alpha</td><td>pending-review</td><td>operations</td></tr><tr><td>bravo</td><td>pending-review</td><td>hiring</td></tr><tr><td>charlie</td><td>needs-detail</td><td>—</td></tr><tr><td>delta</td><td>suppressed</td><td>—</td></tr><tr><td>echo</td><td>suppressed</td><td>—</td></tr><tr><td>alpha-copy</td><td>duplicate</td><td>—</td></tr></tbody></table><section><h2>What happens next</h2><p>The explicit review fixture permits one draft to enter the local ledger. A later fixture reply suppresses that record. A repeat run stages zero additional uploads. These are offline boundary examples, not production performance.</p></section><section><h2>Rendered drafts</h2><pre>[
+  {
+    &quot;id&quot;: &quot;alpha&quot;,
+    &quot;contact_key&quot;: &quot;alex@alpha.example&quot;,
+    &quot;campaign&quot;: &quot;operations&quot;,
+    &quot;subject&quot;: &quot;A question for Alex&quot;,
+    &quot;body&quot;: &quot;Hi Alex, Your team tracks stock requests in a shared spreadsheet. Would it be useful to compare how that handoff is tracked?&quot;,
+    &quot;review_status&quot;: &quot;approved&quot;,
+    &quot;route_reason&quot;: &quot;Overrode hiring campaign because the source has no hiring signal&quot;,
+    &quot;content_hash&quot;: &quot;92dce155f3aa2680d6ea4f1359c2854678b50d8b1a2c5c1d48ae1302ab137893&quot;,
+    &quot;reviewer&quot;: &quot;synthetic-reviewer&quot;,
+    &quot;approved_hash&quot;: &quot;92dce155f3aa2680d6ea4f1359c2854678b50d8b1a2c5c1d48ae1302ab137893&quot;
+  },
+  {
+    &quot;id&quot;: &quot;bravo&quot;,
+    &quot;contact_key&quot;: &quot;blair@bravo.example&quot;,
+    &quot;campaign&quot;: &quot;hiring&quot;,
+    &quot;subject&quot;: &quot;Your open coordinator role&quot;,
+    &quot;body&quot;: &quot;Hi Blair, You are hiring a coordinator to manage intake. Would it be useful to map the repeated steps around that role?&quot;,
+    &quot;review_status&quot;: &quot;pending&quot;,
+    &quot;route_reason&quot;: &quot;Fixture model recommendation passed the allowed-campaign check&quot;,
+    &quot;content_hash&quot;: &quot;bcf72fc78695310d95fb2bc78caee0ac90a2868255ebb22f88fc3d005c8b5581&quot;
+  }
+]</pre></section></main></html>
